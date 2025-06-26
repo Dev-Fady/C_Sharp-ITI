@@ -10,7 +10,7 @@ namespace Day4
     {
 
 
-        // plicit interface imple
+        // implicit interface imple
 
         //public void Move()
         //{
