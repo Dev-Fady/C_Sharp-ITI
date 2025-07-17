@@ -91,5 +91,17 @@ namespace Day5
                index = -1;
             }
         }
+
+        public int this[int index]
+        {
+            get
+            {
+                return items[index];
+            }
+            set
+            {
+                items[index] = value;
+            }
+        }
     }
 }
