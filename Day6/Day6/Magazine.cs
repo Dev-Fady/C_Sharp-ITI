@@ -8,9 +8,9 @@ namespace Day6
 {
     internal class Magazine
     {
-        internal void NewPlayerAdded(PlayerAddedEventArgs playerAdded)
+        internal void NewPlayerAdded(object sender, PlayerAddedEventArgs playerAdded)
         {
-            Console.WriteLine($"Magazine: New player {playerAdded.PlayerName} added to the {playerAdded.ClubName} {playerAdded.DateAdded.TimeOfDay}.");
+            Console.WriteLine($"Magazine: New player {playerAdded.PlayerName} added to the {playerAdded.ClubName} {playerAdded.DateAdded.TimeOfDay} -----{sender}-----.");
         }
     }
 }

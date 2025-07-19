@@ -145,9 +145,12 @@
             Journalist journalist = new Journalist();
             Journalist journalist2 = new Journalist();
             Magazine magazine = new Magazine();
-           
+            Website website = new Website();
+
+
             alAhly.PlayerAdded += journalist.PlayereAdded;
             alAhly.PlayerAdded += magazine.NewPlayerAdded;
+            website.Playercom += journalist.PlayereAdded;
 
             alAhly.AddPlayer("Mohamed Salah");
 
@@ -160,6 +163,7 @@
             //! madred.PlayerAdded = null;
 
             madred.AddPlayer("Omer Ahmed");
+            website.AddPlayer();
         }
     }
 }
