@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace Day6
     {
 
         //public event Action<string,string,DateTime> PlayerAdded;
-        public event Action<PlayerAddedEventArgs> PlayerAdded;
+        public event Action<object, PlayerAddedEventArgs> PlayerAdded;
         List<string> players = new List<string>();
         public string Name { get; set; }
         
@@ -29,7 +30,7 @@ namespace Day6
         //    }
         //}
 
-        public void AddPlayer(string player)
+        public virtual void AddPlayer(string player)
         {
             if (!players.Contains(player))
             {
@@ -41,7 +42,7 @@ namespace Day6
                 //}
                 if (PlayerAdded != null)
                 {
-                    PlayerAdded(new PlayerAddedEventArgs
+                    PlayerAdded( this,new PlayerAddedEventArgs
                     {
                         PlayerName = player,
                         ClubName = Name,

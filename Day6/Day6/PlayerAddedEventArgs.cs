@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day6
 {
-    internal class PlayerAddedEventArgs
+    internal class PlayerAddedEventArgs : EventArgs
     {
         public string PlayerName { get; set; }
         public string ClubName { get; set; }
